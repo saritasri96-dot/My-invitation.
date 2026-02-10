@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Invitation</title>
+<style>
+body{
+  background: radial-gradient(circle, #3a1c71, #d76d77, #ffaf7b);
+  height:100vh;
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: Georgia, serif;
+  overflow:hidden;
+}
+
+.box{
+  background:rgba(255,255,255,0.95);
+  padding:40px 30px;
+  border-radius:30px;
+  text-align:center;
+  width:320px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+  animation:zoom 1.2s ease;
+}
+
+@keyframes zoom{
+  from{transform:scale(0.7);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
+
+button{
+  margin-top:20px;
+  padding:14px 25px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(to right,#b9935a,#8b6b2e);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* flower / leaf animation */
+.leaf{
+  position:absolute;
+  font-size:22px;
+  animation:fall 7s linear infinite;
+}
+
+@keyframes fall{
+  from{top:-50px;opacity:1;}
+  to{top:100vh;opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- leaves / flowers -->
+<div class="leaf" style="left:10%">🍃</div>
+<div class="leaf" style="left:30%;animation-delay:2s">🌸</div>
+<div class="leaf" style="left:55%;animation-delay:4s">🍁</div>
+<div class="leaf" style="left:75%;animation-delay:6s">🌺</div>
+
+<div class="box">
+  <h2>Exclusive Invitation</h2>
+  <p>Please click the button below</p>
+
+  <button onclick="openInvite()">
+    Click here to view invitation
+  </button>
+</div>
+
+<script>
+function openInvite(){
+  window.location.href="invitation.html";
+}
+</script>
+
+</body>
+</html>
